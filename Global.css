@@ -1,0 +1,43 @@
+/* global.css - estils comuns mínims */
+:root{
+  --bg:#ffffff;
+  --text:#111;
+  --muted:#555;
+  --accent:#0a66c2;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg)}
+
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.site-header{position:fixed;top:0;left:0;width:100%;background:#fff;border-bottom:1px solid #e6e6e6;z-index:100}
+.header-inner{height:70px;display:flex;align-items:center;justify-content:space-between}
+.main-nav a{margin-left:12px;text-decoration:none;color:var(--text)}
+
+/* comience debajo del encabezado*/
+.site-main{margin-top:70px;padding-bottom:40px}
+
+/* Footer */
+footer{background:#fff;border-top:1px solid #e6e6e6;padding:12px 0}
+.footer-inner{max-width:1100px;margin:0 auto;padding:0 16px;display:flex;justify-content:space-between}
+
+/* Helpers */
+.btn{display:inline-block;padding:8px 12px;background:var(--accent);color:#fff;text-decoration:none;border-radius:4px}
+.muted{color:var(--muted)}
+
+
+.collections{display:flex;gap:12px}
+.collections .card{flex:1;padding:12px;border:1px solid #ddd}
+.benefits{display:flex;gap:12px;justify-content:center}
+
+.product-list{display:flex;flex-wrap:wrap;gap:12px}
+.product-card{flex:1 1 260px;padding:12px;border:1px solid #ddd}
+
+.contact-flex{display:flex;gap:12px;align-items:start}
+/* two columns: children will flex 1 1 0 to share space */
+.contact-flex > *{flex:1 1 0}
+@media (max-width:700px){
+  .collections{flex-direction:column}
+  .contact-flex{flex-direction:column}
+}
